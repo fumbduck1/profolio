@@ -1,0 +1,21 @@
+name: Deploy site to GitHub Pages
+on:
+  push:
+    branches: [ main, master ]
+
+permissions:
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Deploy site folder to gh-pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: site
+          token: ${{ secrets.GITHUB_TOKEN }}
