@@ -4,6 +4,32 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>About — Akram Hossain</title>
+  <link rel="icon" href="public/favicon.ico?v=2">
+  <link rel="icon" href="public/images/logoah.svg?v=2" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="public/images/logoah.svg">
+  <script>
+    (function(){
+      function genPngFromSvgUrl(svgUrl,size,cb){
+        var img=new Image();
+        img.onload=function(){
+          var c=document.createElement('canvas');c.width=size;c.height=size;
+          var ctx=c.getContext('2d');ctx.clearRect(0,0,size,size);
+          ctx.drawImage(img,0,0,size,size);
+          try{cb(c.toDataURL('image/png'));}catch(e){cb(null);}        };
+        img.onerror=function(){cb(null);} ;
+        img.src=svgUrl;
+      }
+      var svgHref=(document.querySelector('link[rel="icon"]')||{}).href||'public/images/logoah.svg';
+      var sizes=[16,32,64,128,256,512];
+      sizes.forEach(function(s){
+        genPngFromSvgUrl(svgHref,s,function(dataUrl){
+          if(!dataUrl) return;
+          var l=document.createElement('link');l.rel='icon';l.type='image/png';l.sizes=s+'x'+s;l.href=dataUrl;document.head.appendChild(l);
+          if(s===32){var sh=document.createElement('link');sh.rel='shortcut icon';sh.href=dataUrl;document.head.appendChild(sh);}
+        });
+      });
+    })();
+  </script>
   <style>
     :root{--bg:#0a0a0a;--fg:#eaeaea;--muted:#94a3b8;--accent:#14b8a6;--accent-red:#e61919}
     body{margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,Segoe UI,Arial;line-height:1.4;position:relative}
