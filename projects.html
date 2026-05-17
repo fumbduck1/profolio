@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Projects — Akram Hossain</title>
+  <style>
+    :root{--bg:#0a0a0a;--fg:#eaeaea;--muted:#94a3b8;--accent:#14b8a6;--accent-red:#e61919}
+    body{margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,Segoe UI,Arial;line-height:1.4;position:relative}
+    .wrap{width:100%;max-width:none;box-sizing:border-box;padding:40px 48px;margin:0;border:none;background:transparent}
+    nav.site-header{display:grid;grid-template-columns:1fr auto;align-items:center;padding:14px 20px;background:rgba(255,255,255,0.04);box-shadow:none;margin-bottom:36px;border-bottom:1px solid rgba(255,255,255,0.12)}
+    nav.site-header .brand{display:flex;align-items:center;gap:12px;font-weight:700;color:var(--accent);text-decoration:none}
+    nav.site-header .meta{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono', monospace;text-transform:uppercase;letter-spacing:0.12em;color:var(--muted);font-size:12px}
+    nav a{color:var(--muted);text-decoration:none;margin-left:20px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:18px}
+    .card{background:rgba(255,255,255,0.02);padding:20px;border-radius:0;border:1px solid rgba(255,255,255,0.12);box-shadow:none}
+    .card h3{margin-top:0;color:var(--fg);font-family:ui-monospace, Monaco, monospace}
+    .card p{color:var(--muted);margin:8px 0 0 0}
+    .muted{color:var(--muted);font-size:13px}
+    main{margin-bottom:28px}
+    footer.site-footer{margin-top:36px;color:var(--muted);font-size:12px;padding:18px 14px 12px;background:transparent;border-top:1px solid rgba(255,255,255,0.12);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px}
+    footer.site-footer a{color:var(--muted);text-decoration:none}
+    /* Scanlines + subtle noise overlay */
+    body::before{content:'';position:fixed;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg, rgba(255,255,255,0.006) 0 1px, rgba(255,255,255,0) 1px 3px), linear-gradient(180deg, rgba(0,0,0,0.02), rgba(0,0,0,0));mix-blend-mode:overlay}
+    body::after{content:'';position:fixed;inset:0;pointer-events:none;background-image:radial-gradient(rgba(255,255,255,0.006) 1px, transparent 1px);background-size:3px 3px;opacity:0.02}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav class="site-header">
+      <a href="index.html" class="brand">
+        <img src="public/images/logoah.svg" alt="Akram Hossain" width="80" height="80" style="flex-shrink:0">
+        <span>Akram Hossain</span>
+      </a>
+      <div class="meta">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+
+    <main>
+      <h1>Featured Projects</h1>
+      <p class="muted">Selected work :three featured projects. Full repo list is available on my GitHub.</p>
+
+      <div class="grid">
+        <div class="card">
+          <h3>SohozBiniyog</h3>
+          <p class="muted">Corporate portfolio & asset-management website. live site: <a href="https://www.sohozbiniyog.com/" target="_blank" rel="noopener noreferrer">sohozbiniyog.com</a></p>
+        </div>
+
+        <div class="card">
+          <h3>arekta_e-comm_app-mobile</h3>
+          <p class="muted">Multi-vendor e-commerce mobile app (Flutter). Repo: <a href="https://github.com/fumbduck1/arekta_e-comm_app-mobile" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+        </div>
+
+        <div class="card">
+          <h3>web-scrapping-for-bangla-language</h3>
+          <p class="muted">Web scraping toolkit for Bangla-language resources. Repo: <a href="https://github.com/fumbduck1/web-scrapping-for-bangla-language" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+        </div>
+      </div>
+
+      <h2 style="margin-top:28px">Other Projects</h2>
+      <p class="muted">Additional work and smaller utilities from my GitHub (excluding featured items).</p>
+      <div class="grid" style="margin-top:12px">
+        <div class="card">
+          <h3>compiler_phases_visualizer</h3>
+          <p class="muted">Interactive desktop visualizer demonstrating compiler phases for expression evaluation. Repo: <a href="https://github.com/fumbduck1/compiler_phases_visualizer" target="_blank" rel="noopener">GitHub</a></p>
+        </div>
+
+        <div class="card">
+          <h3>pdf-scrapping-for-bangla-language</h3>
+          <p class="muted">Adaptive PDF parsing and OCR pipeline tailored for Bangla eBooks. Repo: <a href="https://github.com/fumbduck1/pdf-scrapping-for-bangla-language" target="_blank" rel="noopener">GitHub</a></p>
+        </div>
+      </div>
+
+    </main>
+
+    <footer class="site-footer">
+      <div>&copy; 2026 Akram Hossain</div>
+      <div>Dhaka, Bangladesh • <a href="tel:+8801824532376">+8801824532376</a> • <a href="mailto:akram241-15-750@diu.edu.bd">akram241-15-750@diu.edu.bd</a></div>
+      <div><a href="https://github.com/fumbduck1" target="_blank" rel="noopener">GitHub</a></div>
+    </footer>
+  </div>
+</body>
+</html>

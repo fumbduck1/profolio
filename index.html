@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Akram Hossain</title>
+  <style>
+    :root{--bg:#0a0a0a;--fg:#eaeaea;--muted:#94a3b8;--accent:#14b8a6;--accent-red:#e61919}
+    body{margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,Segoe UI,Arial;line-height:1.4;position:relative}
+    /* Tactical Telemetry prototype styles */
+    .wrap{width:100%;max-width:none;box-sizing:border-box;padding:40px 48px;margin:0;border:none;background:transparent}
+    nav.site-header{display:grid;grid-template-columns:1fr auto;align-items:center;padding:14px 20px;background:rgba(255,255,255,0.04);border-radius:0;box-shadow:none;margin-bottom:36px;border-bottom:1px solid rgba(255,255,255,0.12)}
+    nav.site-header .brand{display:flex;align-items:center;gap:12px;font-weight:700;color:var(--accent);text-decoration:none}
+    nav.site-header .meta{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono', monospace;text-transform:uppercase;letter-spacing:0.12em;color:var(--muted);font-size:12px}
+    nav a{color:var(--muted);text-decoration:none;margin-left:20px}
+    h1{color:var(--fg);font-size:clamp(2.5rem,9vw,6rem);margin:0;line-height:0.95;letter-spacing:-0.03em;font-weight:800}
+    h2{color:#fff;font-size:24px;margin:40px 0 20px 0}
+    .hero{display:grid;grid-template-columns:1fr 340px;gap:36px;align-items:start;margin-bottom:60px}
+    .hero-text h1{margin-bottom:12px}
+    .hero-pic{width:340px;height:340px;overflow:hidden;border:2px solid rgba(255,255,255,0.04);border-radius:0}
+    .hero-pic img{width:100%;height:100%;object-fit:cover;display:block}
+    .metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:50px 0}
+    .metric{background:rgba(255,255,255,0.02);padding:18px;border:1px solid rgba(255,255,255,0.12);text-align:center;border-radius:0}
+    .metric-num{font-size:30px;font-weight:800;color:var(--accent-red);margin-bottom:6px;font-family:ui-monospace, Monaco, monospace}
+    .metric-label{font-size:12px;color:var(--muted);text-transform:uppercase;font-family:ui-monospace, Monaco, monospace;letter-spacing:0.08em}
+    .stack{color:var(--muted);font-size:15px;line-height:1.6;margin:0 0 24px 0}
+    #tech-row{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0 0 0}
+    .tech-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.12);border-radius:0;font-size:13px;color:var(--muted);font-family:ui-monospace, Monaco, monospace;text-transform:uppercase}
+    .bio{color:var(--muted);font-size:15px;line-height:1.8;margin:40px 0}
+    #quote{color:var(--muted);font-size:14px;font-style:italic;margin-top:30px}
+    footer.site-footer{margin-top:40px;color:var(--muted);font-size:12px;padding:18px 16px 14px;background:transparent;border-top:1px solid rgba(255,255,255,0.12);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px}
+    footer.site-footer a{color:var(--muted);text-decoration:none}
+    /* Scanlines + subtle noise overlay */
+    body::before{content:'';position:fixed;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg, rgba(255,255,255,0.006) 0 1px, rgba(255,255,255,0) 1px 3px), linear-gradient(180deg, rgba(0,0,0,0.02), rgba(0,0,0,0));mix-blend-mode:overlay}
+    body::after{content:'';position:fixed;inset:0;pointer-events:none;background-image:radial-gradient(rgba(255,255,255,0.006) 1px, transparent 1px);background-size:3px 3px;opacity:0.02}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+  <nav class="site-header">
+      <a href="index.html" class="brand">
+        <img src="public/images/logoah.svg" alt="Akram Hossain" width="80" height="80" style="flex-shrink:0">
+        <span>Akram Hossain</span>
+      </a>
+      <div class="meta">
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+
+    <main>
+      <div class="hero">
+        <div class="hero-text">
+          <h1>Software Engineer & Tech Lead</h1>
+          <p class="stack">I build reliable, maintainable software : primarily focused on Web and mobile apps and data engineering.</p>
+        </div>
+        <div class="hero-pic">
+          <img src="public/images/akramhossain.jpeg" alt="Akram Hossain">
+        </div>
+      </div>
+
+      <div class="metrics">
+        <div class="metric">
+          <div class="metric-num">5</div>
+          <div class="metric-label">Total Projects</div>
+        </div>
+        <div class="metric">
+          <div class="metric-num">7</div>
+          <div class="metric-label">Repositories</div>
+        </div>
+        <div class="metric">
+          <div class="metric-num">4+</div>
+          <div class="metric-label">Years Experience</div>
+        </div>
+      </div>
+
+      <h2>Technical Stack</h2>
+      <p class="stack">Python · Flutter · Java · Playwright · PostgreSQL · Data scraping · Linux · Kotlin</p>
+      <div id="tech-row">
+        <!-- SVG tech icons injected by script -->
+      </div>
+
+      <p class="bio">I am a deeply passionate and forward‑thinking technology professional who thrives on exploring and engaging with the ever‑evolving landscape of modern innovation. My work spans across diverse areas of full‑stack mobile development and data engineering, where I enjoy immersing myself in complex projects that bring together creativity, technical expertise, and practical problem‑solving. I place a strong emphasis on collaborative teamwork, believing that meaningful progress often comes from shared ideas and collective effort. Beyond the technical aspects, I am motivated by the opportunity to contribute to applied research and product development, where I can help transform innovative concepts into tangible solutions that make a real impact.</p>
+
+    </main>
+
+    <footer class="site-footer">
+      <div>&copy; 2026 Akram Hossain</div>
+      <div>Dhaka, Bangladesh • <a href="tel:+8801824532376">+8801824532376</a> • <a href="mailto:akram241-15-750@diu.edu.bd">akram241-15-750@diu.edu.bd</a></div>
+      <div><a href="https://github.com/fumbduck1" target="_blank" rel="noopener">GitHub</a></div>
+    </footer>
+  </div>
+  <script>
+    (function(){
+      const techs = [
+        {name:'Python', img:'public/images/python.svg'},
+        {name:'Flutter', img:'public/images/flutter.svg'},
+        {name:'Java', img:'public/images/java.svg'},
+        {name:'Playwright', img:'public/images/python.svg'},
+        {name:'PostgreSQL', img:'public/images/postgresql.svg'},
+        {name:'Linux', img:'public/images/linux.svg'},
+        {name:'Kotlin', img:'public/images/kotlin.svg'}
+      ];
+
+      const row = document.getElementById('tech-row');
+      techs.forEach(t=>{
+        const badge = document.createElement('div');
+        badge.style.cssText = 'display:inline-flex;align-items:center;gap:6px;padding:6px 10px;background:rgba(255,255,255,0.02);border-radius:6px;color:var(--muted)';
+        badge.innerHTML = `<img src="${t.img}" alt="${t.name}" width="20" height="20"><span style="font-size:12px">${t.name}</span>`;
+        row.appendChild(badge);
+      });
+    })();
+  </script>
+</body>
+</html>
